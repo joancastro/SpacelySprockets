@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ItemsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('{reactRoutes}', function () {
+    return view('welcome'); // your start view
+})->where('reactRoutes', '^((?!api).)*$'); // except 'api' word
+
+
+Route::get("api/inventory",[ItemsController::class,'index']);

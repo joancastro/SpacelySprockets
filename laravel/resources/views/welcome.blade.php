@@ -8,10 +8,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <!-- React root DOM -->
-    <div id="example">
+<!-- React root DOM -->
+<div id="app-router">
 
-    </div>
+</div>
 
 <!-- React JS -->
 <script src="{{ asset('js/app.js') }}" defer></script>
